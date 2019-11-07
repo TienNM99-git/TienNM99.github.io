@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FamilyManagementSoftware", "FamilyManagementSoftware\FamilyManagementSoftware.csproj", "{BA13EE64-637E-4BDC-B012-E81BCFA6ACAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA13EE64-637E-4BDC-B012-E81BCFA6ACAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA13EE64-637E-4BDC-B012-E81BCFA6ACAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA13EE64-637E-4BDC-B012-E81BCFA6ACAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA13EE64-637E-4BDC-B012-E81BCFA6ACAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6BA8369F-3BB6-4D79-8BE8-0C7CD9A5FACC}
+	EndGlobalSection
+EndGlobal

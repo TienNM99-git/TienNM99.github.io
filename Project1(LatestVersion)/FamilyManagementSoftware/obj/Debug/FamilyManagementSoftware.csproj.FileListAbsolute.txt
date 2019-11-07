@@ -1,0 +1,49 @@
+C:\Users\MSI\source\repos\FamilyManagementSoftware\FamilyManagementSoftware\bin\Debug\FamilyManagementSoftware.exe.config
+C:\Users\MSI\source\repos\FamilyManagementSoftware\FamilyManagementSoftware\bin\Debug\FamilyManagementSoftware.exe
+C:\Users\MSI\source\repos\FamilyManagementSoftware\FamilyManagementSoftware\bin\Debug\FamilyManagementSoftware.pdb
+C:\Users\MSI\source\repos\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.csprojAssemblyReference.cache
+C:\Users\MSI\source\repos\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.Form1.resources
+C:\Users\MSI\source\repos\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.Properties.Resources.resources
+C:\Users\MSI\source\repos\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.csproj.GenerateResource.cache
+C:\Users\MSI\source\repos\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.csproj.CoreCompileInputs.cache
+C:\Users\MSI\source\repos\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.exe
+C:\Users\MSI\source\repos\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.pdb
+C:\Users\MSI\source\repos\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.AddingForm.resources
+C:\Users\MSI\source\repos\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.Authentication.resources
+C:\Users\MSI\source\repos\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.ViewTree.resources
+E:\Coding files\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.csprojAssemblyReference.cache
+E:\Coding files\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.AddingForm.resources
+E:\Coding files\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.Authentication.resources
+E:\Coding files\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.Form1.resources
+E:\Coding files\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.Properties.Resources.resources
+E:\Coding files\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.csproj.GenerateResource.cache
+E:\Coding files\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.csproj.CoreCompileInputs.cache
+E:\Coding files\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.exe
+E:\Coding files\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.pdb
+E:\Coding files\FamilyManagementSoftware\FamilyManagementSoftware\bin\Debug\FamilyManagementSoftware.exe.config
+E:\Coding files\FamilyManagementSoftware\FamilyManagementSoftware\bin\Debug\FamilyManagementSoftware.exe
+E:\Coding files\FamilyManagementSoftware\FamilyManagementSoftware\bin\Debug\FamilyManagementSoftware.pdb
+E:\IT\Coding files\FamilyManagementSoftware\FamilyManagementSoftware\bin\Debug\FamilyManagementSoftware.exe.config
+E:\IT\Coding files\FamilyManagementSoftware\FamilyManagementSoftware\bin\Debug\FamilyManagementSoftware.exe
+E:\IT\Coding files\FamilyManagementSoftware\FamilyManagementSoftware\bin\Debug\FamilyManagementSoftware.pdb
+E:\IT\Coding files\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.csprojAssemblyReference.cache
+E:\IT\Coding files\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.AddingForm.resources
+E:\IT\Coding files\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.Authentication.resources
+E:\IT\Coding files\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.Form1.resources
+E:\IT\Coding files\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.Properties.Resources.resources
+E:\IT\Coding files\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.csproj.GenerateResource.cache
+E:\IT\Coding files\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.csproj.CoreCompileInputs.cache
+E:\IT\Coding files\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.exe
+E:\IT\Coding files\FamilyManagementSoftware\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.pdb
+D:\FMSTest\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.csprojAssemblyReference.cache
+D:\FMSTest\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.AddingForm.resources
+D:\FMSTest\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.Authentication.resources
+D:\FMSTest\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.Form1.resources
+D:\FMSTest\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.Properties.Resources.resources
+D:\FMSTest\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.csproj.GenerateResource.cache
+D:\FMSTest\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.csproj.CoreCompileInputs.cache
+D:\FMSTest\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.exe
+D:\FMSTest\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.pdb
+D:\FMSTest\FamilyManagementSoftware\bin\Debug\FamilyManagementSoftware.exe.config
+D:\FMSTest\FamilyManagementSoftware\bin\Debug\FamilyManagementSoftware.exe
+D:\FMSTest\FamilyManagementSoftware\bin\Debug\FamilyManagementSoftware.pdb

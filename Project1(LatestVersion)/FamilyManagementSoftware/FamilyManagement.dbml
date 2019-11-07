@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="FamilyManagement" Class="FamilyManagementDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-0CG5KQB\MSSQL2017;Initial Catalog=FamilyManagement;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="FamilyManagementSoftware.Properties.Settings" SettingsPropertyName="FamilyManagementConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Member" Member="Members">
+    <Type Name="Member">
+      <Column Name="memID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="memName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="rustic" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="gender" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="dob" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="dod" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Member_Relationship" Member="Relationships" ThisKey="memID" OtherKey="person1ID" Type="Relationship" />
+      <Association Name="Member_Relationship1" Member="Relationships1" ThisKey="memID" OtherKey="person2ID" Type="Relationship" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Relationships" Member="Relationships">
+    <Type Name="Relationship">
+      <Column Name="person1ID" Type="System.Int32" DbType="Int" IsPrimaryKey="true" CanBeNull="true" />
+      <Column Name="person2ID" Type="System.Int32" DbType="Int" IsPrimaryKey="true" CanBeNull="true" />
+      <Column Name="relation" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="familyID" Member="parentageID" Storage="_familyID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Member_Relationship" Member="Member" ThisKey="person1ID" OtherKey="memID" Type="Member" IsForeignKey="true" />
+      <Association Name="Member_Relationship1" Member="Member1" ThisKey="person2ID" OtherKey="memID" Type="Member" IsForeignKey="true" />
+      <Association Name="Parentage_Relationship" Member="Parentage" ThisKey="parentageID" OtherKey="pID" Type="Parentage" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Parentage" Member="Parentages">
+    <Type Name="Parentage">
+      <Column Name="pID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="pName" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="Parentage_Relationship" Member="Relationships" ThisKey="pID" OtherKey="parentageID" Type="Relationship" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Authentication" Member="Authentications">
+    <Type Name="Authentication">
+      <Column Name="username" Type="System.String" DbType="NChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
