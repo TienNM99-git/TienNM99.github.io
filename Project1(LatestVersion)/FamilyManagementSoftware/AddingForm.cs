@@ -84,7 +84,7 @@ namespace FamilyManagementSoftware
         }
         private void cmbFamilyList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dgvMember.DataSource = DAOMember.Instance.GetAllMemOfAParentage(cmbFamilyList.SelectedIndex + 1);
+            memberSource.DataSource = DAOMember.Instance.GetAllMemOfAParentage(cmbFamilyList.SelectedIndex + 1);
         }
         #endregion
         #region Event Handler
