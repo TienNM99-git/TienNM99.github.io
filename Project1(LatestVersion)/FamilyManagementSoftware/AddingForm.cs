@@ -21,6 +21,7 @@ namespace FamilyManagementSoftware
         //List<TreeNode<Member>> lstParentageNode = new List<TreeNode<Member>>();
         TreeNode<Member> root;
         int rootID;
+        int selectedID;
         public AddingForm()
         {
             InitializeComponent();
@@ -84,7 +85,7 @@ namespace FamilyManagementSoftware
         }
         private void cmbFamilyList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dgvMember.DataSource = DAOMember.Instance.GetAllMemOfAParentage(cmbFamilyList.SelectedIndex + 1);
+            memberSource.DataSource = DAOMember.Instance.GetAllMemOfAParentage(cmbFamilyList.SelectedIndex + 1);
         }
         #endregion
         #region Event Handler
@@ -147,35 +148,39 @@ namespace FamilyManagementSoftware
         #region Click Events
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string memName = txtName.Text;
-            int memID = int.Parse(txtmemID.Text);      
-            string rustic = txtRustic.Text;
-            string gender;
-            if (rdbMale.Checked)
+            try
             {
-                gender = rdbMale.Text;
-            }
-            else
-            {
-                gender = rdbFemale.Text;
-            }
-            string curAdd = txtAddress.Text;
-            DateTime dob = dtpBirth.Value;
-            DateTime dod = dtpDeath.Value;
-            if (DAOMember.Instance.InsertMember(memID, memName, rustic, gender, dob, dod, curAdd))
-            {
-                MessageBox.Show("Add member successful");
-                LoadListMember();
-                if (insertMember != null)
+                string memName = txtName.Text;
+                int memID = int.Parse(txtmemID.Text);
+                string rustic = txtRustic.Text;
+                string gender;
+                if (rdbMale.Checked)
                 {
-                    insertMember(this, new EventArgs());
-                    
+                    gender = rdbMale.Text;
+                }
+                else
+                {
+                    gender = rdbFemale.Text;
+                }
+                string curAdd = txtAddress.Text;
+                DateTime dob = dtpBirth.Value;
+                DateTime dod = dtpDeath.Value;
+                if (DAOMember.Instance.InsertMember(memID, memName, rustic, gender, dob, dod, curAdd))
+                {
+                    MessageBox.Show("Add member successful");
+                    LoadListMember();
+                    if (insertMember != null)
+                    {
+                        insertMember(this, new EventArgs());
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Adding Unsuccessful");
                 }
             }
-            else
-            {
-                MessageBox.Show("Adding Unsuccessful");
-            }
+            catch { }
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -183,35 +188,39 @@ namespace FamilyManagementSoftware
         }               
         private void btnMod_Click_1(object sender, EventArgs e)
         {
-            string memName = txtName.Text;
-            int memID = int.Parse(txtmemID.Text);
-            string rustic = txtRustic.Text;
-            string gender;
-            if (rdbMale.Checked)
+            try
             {
-                gender = rdbMale.Text;
-            }
-            else
-            {
-                gender = rdbFemale.Text;
-            }
-            string curAdd = txtAddress.Text;
-            DateTime dob = dtpBirth.Value;
-            DateTime dod = dtpDeath.Value;
-            if (DAOMember.Instance.ModifyMember(memID, memName, rustic, gender, dob, dod, curAdd))
-            {
-                MessageBox.Show("Modify member successful");
-                LoadListMember();
-                if (modifyMember != null)
+                string memName = txtName.Text;
+                int memID = int.Parse(txtmemID.Text);
+                string rustic = txtRustic.Text;
+                string gender;
+                if (rdbMale.Checked)
                 {
-                    modifyMember(this, new EventArgs());
-                    
+                    gender = rdbMale.Text;
+                }
+                else
+                {
+                    gender = rdbFemale.Text;
+                }
+                string curAdd = txtAddress.Text;
+                DateTime dob = dtpBirth.Value;
+                DateTime dod = dtpDeath.Value;
+                if (DAOMember.Instance.ModifyMember(memID, memName, rustic, gender, dob, dod, curAdd))
+                {
+                    MessageBox.Show("Modify member successful");
+                    LoadListMember();
+                    if (modifyMember != null)
+                    {
+                        modifyMember(this, new EventArgs());
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Modify member Unsuccessful");
                 }
             }
-            else
-            {
-                MessageBox.Show("Modify member Unsuccessful");
-            }
+            catch { }
         }
 
         private void btnDel_Click_1(object sender, EventArgs e)
@@ -235,41 +244,48 @@ namespace FamilyManagementSoftware
 
         private void btnAddParentage_Click_1(object sender, EventArgs e)
         {
-            int pID = int.Parse(txtpID.Text);
-            string pName = txtpName.Text;
-            if (DAOParentage.Instance.InsertParentage(pID, pName))
+            try
             {
-                MessageBox.Show("Insert parentage successful");
-                LoadListParentage();
-                if (insertParentage != null)
+                int pID = int.Parse(txtpID.Text);
+                string pName = txtpName.Text;
+                if (DAOParentage.Instance.InsertParentage(pID, pName))
                 {
-                    insertParentage(this, new EventArgs());                
+                    MessageBox.Show("Insert parentage successful");
+                    LoadListParentage();
+                    if (insertParentage != null)
+                    {
+                        insertParentage(this, new EventArgs());
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Insert parentage Unsuccessful");
                 }
             }
-            else
-            {
-                MessageBox.Show("Insert parentage Unsuccessful");
-            }
+            catch { }
         }
 
         private void btnModifyParentage_Click_1(object sender, EventArgs e)
         {
-
-            int pID = int.Parse(txtpID.Text);
-            string pName = txtpName.Text;
-            if (DAOParentage.Instance.ModifyParentage(pID, pName))
+            try
             {
-                MessageBox.Show("Modify parentage successful");
-                LoadListParentage();
-                if (modifyParentage != null)
+                int pID = int.Parse(txtpID.Text);
+                string pName = txtpName.Text;
+                if (DAOParentage.Instance.ModifyParentage(pID, pName))
                 {
-                    modifyParentage(this, new EventArgs());
+                    MessageBox.Show("Modify parentage successful");
+                    LoadListParentage();
+                    if (modifyParentage != null)
+                    {
+                        modifyParentage(this, new EventArgs());
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Modify parentage Unsuccessful");
                 }
             }
-            else
-            {
-                MessageBox.Show("Modify parentage Unsuccessful");
-            }
+            catch { }
         }
 
         private void btnDeleteParentage_Click_1(object sender, EventArgs e)
@@ -291,44 +307,52 @@ namespace FamilyManagementSoftware
         }
         private void btnAddRelation_Click(object sender, EventArgs e)
         {
-            int p1ID = int.Parse(txtP1ID.Text);
-            int p2ID = int.Parse(txtP2ID.Text);
-            string relation = txtRelation.Text;
-            int familyID = int.Parse(txtFamilyID.Text);
-            if (DAORelation.Instance.InsertRelation(p1ID, p2ID, relation, familyID))
+            try
             {
-                MessageBox.Show("Insert relationship successful");
-                LoadRelationships();
-                if (insertRelation != null)
+                int p1ID = int.Parse(txtP1ID.Text);
+                int p2ID = int.Parse(txtP2ID.Text);
+                string relation = txtRelation.Text;
+                int familyID = int.Parse(txtFamilyID.Text);
+                if (DAORelation.Instance.InsertRelation(p1ID, p2ID, relation, familyID))
                 {
-                    insertRelation(this, new EventArgs());
+                    MessageBox.Show("Insert relationship successful");
+                    LoadRelationships();
+                    if (insertRelation != null)
+                    {
+                        insertRelation(this, new EventArgs());
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Modify relationship Unsuccessful");
                 }
             }
-            else
-            {
-                MessageBox.Show("Modify relationship Unsuccessful");
-            }
+            catch { }
         }
 
         private void btnModRelation_Click(object sender, EventArgs e)
         {
-            int p1ID = int.Parse(txtP1ID.Text);
-            int p2ID = int.Parse(txtP2ID.Text);
-            string relation = txtRelation.Text;
-            int familyID = int.Parse(txtFamilyID.Text);
-            if (DAORelation.Instance.ModifyRelation(p1ID, p2ID, relation, familyID))
+            try
             {
-                MessageBox.Show("Modify relationship successful");
-                LoadRelationships();
-                if (modifyRelation != null)
+                int p1ID = int.Parse(txtP1ID.Text);
+                int p2ID = int.Parse(txtP2ID.Text);
+                string relation = txtRelation.Text;
+                int familyID = int.Parse(txtFamilyID.Text);
+                if (DAORelation.Instance.ModifyRelation(p1ID, p2ID, relation, familyID))
                 {
-                    modifyRelation(this, new EventArgs());
+                    MessageBox.Show("Modify relationship successful");
+                    LoadRelationships();
+                    if (modifyRelation != null)
+                    {
+                        modifyRelation(this, new EventArgs());
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Modify relationship Unsuccessful");
                 }
             }
-            else
-            {
-                MessageBox.Show("Modify relationship Unsuccessful");
-            }
+            catch { }
         }
 
         private void btnDelRelation_Click(object sender, EventArgs e)
@@ -365,23 +389,16 @@ namespace FamilyManagementSoftware
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            dgvMember.DataSource = Search(txtName.Text);
+            memberSource.DataSource = Search(txtName.Text);
         }
 
         private void btnPSearch_Click(object sender, EventArgs e)
         {
-            dgvParentage.DataSource = ParentageSearch(txtpName.Text);
+            parentageSource.DataSource = ParentageSearch(txtpName.Text);
         }
         #endregion
 
-       
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-      
         private void ArrangeTree()
         {
             using (Graphics gr = pnlTree.CreateGraphics())
@@ -408,13 +425,11 @@ namespace FamilyManagementSoftware
                 SelectedNode.Data.Selected = false;
                 lblNode.Text = "";
             }
-
             // Find the node at this position (if any).
             using (Graphics gr = pnlTree.CreateGraphics())
             {
                 SelectedNode = root.NodeAtPoint(gr, pt);
             }
-
             // Select the node.
             if (SelectedNode != null)
             {
@@ -430,23 +445,28 @@ namespace FamilyManagementSoftware
         {
             FindNodeUnderMouse(e.Location);
         }
-        private TreeNode<Member> CreateNode(Member member)
+        private TreeNode<Member> CreateNode(Member member) //Create TreeNode from a specified Member
         {
             Button btnMember = new Button();
-            //btnMember.Image = Properties.Resources.Dad;
-            //btnMember.Text = member.memName + member.gender.Trim() == "Male" ? " (M)" : " (F)";
-            //btnMember.Font = new Font("Times New Roman", 10);
             TreeNode<Member> treeNode = new TreeNode<Member>(new Member(member.memID,member.memName +" ("+ (member.gender.Trim()=="Male"? "♂" : "♀")  + ")", btnMember));
             return treeNode;
         }
-        private void AddChildNode(TreeNode<Member> node)
+        private void AddChildNode(TreeNode<Member> node) 
         {
-            List<Member> child = DAORelation.Instance.GetChildList(node.Data.memID);
+            List<Member> child = DAORelation.Instance.GetChildList(node.Data.memID);  //Retrieve the child list of the node
             foreach(Member mem in child)
             {
-                node.Children.Add(CreateNode(mem));
+                node.Children.Add(CreateNode(mem));          //Add child node into the node
+                if(node.Data.memID==selectedID)              //Set selected properties = true if this is the node which selected in datagridview
+                {
+                    SelectedNode = root;
+                    node.Data.Selected = true;
+                }
             }
-
+            foreach(TreeNode<Member> treeNode in node.Children)  //Use recursion to add child node for the children 
+            {
+                AddChildNode(treeNode);          
+            }
         }      
         private void pnlTree_Paint(object sender, PaintEventArgs e)
         {
@@ -454,49 +474,18 @@ namespace FamilyManagementSoftware
             e.Graphics.TextRenderingHint = TextRenderingHint.AntiAliasGridFit;
             if (root != null)
             {
-                root.DrawTree(e.Graphics);
+                root.DrawTree(e.Graphics); 
                 ArrangeTree();
 
             }
         }
         private void btnViewTree_Click(object sender, EventArgs e)
         {          
-            int memID = int.Parse(dgvMember.CurrentRow.Cells["memID"].Value.ToString());
-            rootID = DAORelation.Instance.GetIDAbove(memID);
+           
+            selectedID = int.Parse(dgvMember.CurrentRow.Cells["memID"].Value.ToString());  //Get the selected id
+            rootID = DAORelation.Instance.GetIDAbove(selectedID);                          //Get the root id for drawing
             root = CreateNode(DAOMember.Instance.GetMemberByID(rootID));
-            AddChildNode(root);
-            if(root.Data.memID==memID)
-            {
-                SelectedNode = root;
-                root.Data.Selected = true;
-            }
-            foreach(TreeNode<Member> node in root.Children)
-            {
-                AddChildNode(node);
-                if(node.Data.memID==memID)
-                {
-                    SelectedNode = node;
-                    node.Data.Selected = true;
-                }
-                foreach(TreeNode<Member> childnode in node.Children)
-                {
-                    AddChildNode(childnode);
-                    if (childnode.Data.memID == memID)
-                    {
-                        SelectedNode = childnode;
-                        childnode.Data.Selected = true;
-                    }
-                    foreach (TreeNode<Member> gchildnode in childnode.Children)
-                    {
-                        AddChildNode(gchildnode);
-                        if (gchildnode.Data.memID == memID)
-                        {
-                            SelectedNode = gchildnode;
-                            gchildnode.Data.Selected = true;
-                        }
-                    }
-                }
-            }
+            AddChildNode(root);          
             pnlTree.Refresh();
             pnlTree.Refresh();           
         }
@@ -509,45 +498,18 @@ namespace FamilyManagementSoftware
         {
             using (Graphics gr = pnlTree.CreateGraphics())
             {
-                int selectedId = root.NodeAtPoint(gr,pt).Data.memID;
-                rootID = DAORelation.Instance.GetIDAbove(root.NodeAtPoint(gr, pt).Data.memID);
+                selectedID = root.NodeAtPoint(gr,pt).Data.memID;
+                rootID = DAORelation.Instance.GetIDAbove(selectedID);
                 root = CreateNode(DAOMember.Instance.GetMemberByID(rootID));
-                AddChildNode(root);
-                if (root.Data.memID == selectedId)
-                {
-                    SelectedNode = root;
-                    root.Data.Selected = true;
-                }
-                foreach (TreeNode<Member> node in root.Children)
-                {
-                    AddChildNode(node);
-                    if (node.Data.memID == selectedId)
-                    {
-                        SelectedNode = node;
-                        node.Data.Selected = true;
-                    }
-                    foreach (TreeNode<Member> childnode in node.Children)
-                    {
-                        AddChildNode(childnode);
-                        if (childnode.Data.memID == selectedId)
-                        {
-                            SelectedNode = node;
-                            childnode.Data.Selected = true;
-                        }
-                        foreach (TreeNode<Member> gchildnode in childnode.Children)
-                        {
-                            AddChildNode(gchildnode);
-                            if (gchildnode.Data.memID == selectedId)
-                            {
-                                SelectedNode = node;
-                                gchildnode.Data.Selected = true;
-                            }
-                        }
-                    }
-                }
+                AddChildNode(root);           
                 pnlTree.Refresh();
                 pnlTree.Refresh();
             }
+        }
+
+        private void AddingForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -47,3 +47,15 @@ D:\FMSTest\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.pdb
 D:\FMSTest\FamilyManagementSoftware\bin\Debug\FamilyManagementSoftware.exe.config
 D:\FMSTest\FamilyManagementSoftware\bin\Debug\FamilyManagementSoftware.exe
 D:\FMSTest\FamilyManagementSoftware\bin\Debug\FamilyManagementSoftware.pdb
+D:\Project1(LatestVersion)\FamilyManagementSoftware\bin\Debug\FamilyManagementSoftware.exe.config
+D:\Project1(LatestVersion)\FamilyManagementSoftware\bin\Debug\FamilyManagementSoftware.exe
+D:\Project1(LatestVersion)\FamilyManagementSoftware\bin\Debug\FamilyManagementSoftware.pdb
+D:\Project1(LatestVersion)\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.csprojAssemblyReference.cache
+D:\Project1(LatestVersion)\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.AddingForm.resources
+D:\Project1(LatestVersion)\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.Authentication.resources
+D:\Project1(LatestVersion)\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.Form1.resources
+D:\Project1(LatestVersion)\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.Properties.Resources.resources
+D:\Project1(LatestVersion)\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.csproj.GenerateResource.cache
+D:\Project1(LatestVersion)\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.csproj.CoreCompileInputs.cache
+D:\Project1(LatestVersion)\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.exe
+D:\Project1(LatestVersion)\FamilyManagementSoftware\obj\Debug\FamilyManagementSoftware.pdb

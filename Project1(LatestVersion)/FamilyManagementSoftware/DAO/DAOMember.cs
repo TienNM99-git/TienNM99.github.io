@@ -32,13 +32,13 @@ namespace FamilyManagementSoftware.DAO
         {
             FamilyManagementDataContext db = new FamilyManagementDataContext();
 
-            var query = from Member in db.Members
+            var query = from Member in db.Members          //Get member where id equal memID
                         where Member.memID == memID
                         select Member;
 
             return query.Single(); ;
         }
-        public List<Member> GetListMember()
+        public List<Member> GetListMember()             //Get all member in the database
         {
             FamilyManagementDataContext db = new FamilyManagementDataContext();
             var query = from Member in db.Members
@@ -51,13 +51,13 @@ namespace FamilyManagementSoftware.DAO
             }
             return lstMember;
         }
-        public List<Member> GetAllMemOfAParentage(int pID)
+        public List<Member> GetAllMemOfAParentage(int pID)  //Get all member of a specific parentage
         {
             FamilyManagementDataContext db = new FamilyManagementDataContext();
             List<int> listID1 = new List<int>();
             var query = from Relationship in db.Relationships
                         where Relationship.parentageID == pID
-                        select Relationship.person1ID;
+                        select Relationship.person1ID;                 //Get all person1ID of that parentage
             foreach (int id1 in query)
             {
                 listID1.Add(id1);
@@ -65,16 +65,16 @@ namespace FamilyManagementSoftware.DAO
             List<int> listID2 = new List<int>();
             var query2 = from Relationship in db.Relationships
                          where Relationship.parentageID == pID
-                         select Relationship.person2ID;
+                         select Relationship.person2ID;                //Get all person2ID of that parentage
             foreach (int id2 in query2)
             {
                 listID2.Add(id2);
             }
-            List<int> ID = listID1.Union(listID2).ToList();
+            List<int> ID = listID1.Union(listID2).ToList();            //Union 2 list to have all member ID of that parentage
             List<Member> memList = new List<Member>();
             foreach (int id in ID)
             {
-                memList.Add(DAOMember.Instance.GetMemberByID(id));
+                memList.Add(DAOMember.Instance.GetMemberByID(id));     
             }
             return memList;
         }

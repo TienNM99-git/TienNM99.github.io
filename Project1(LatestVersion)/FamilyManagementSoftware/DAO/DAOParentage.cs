@@ -27,7 +27,7 @@ namespace FamilyManagementSoftware.DAO
 
         private DAOParentage() { }
 
-        public Parentage GetParentageByID(int pID)
+        public Parentage GetParentageByID(int pID)      //Get a parentage from a specific ID
         {
             FamilyManagementDataContext db = new FamilyManagementDataContext();
             var query = (from Parentage in db.Parentages
@@ -35,7 +35,7 @@ namespace FamilyManagementSoftware.DAO
                          select Parentage).Single();
             return query;
         }
-        public List<Parentage> GetListParentage()
+        public List<Parentage> GetListParentage()      //Get the list of parentage
         {
             FamilyManagementDataContext db = new FamilyManagementDataContext();
             var query = from Parentage in db.Parentages

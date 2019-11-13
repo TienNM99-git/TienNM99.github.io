@@ -31,7 +31,7 @@ namespace FamilyManagementSoftware.DAO
             FamilyManagementDataContext db = new FamilyManagementDataContext();
             return db.Relationships;
         }
-        public DataTable GetAllRelationOfAFamily(int pID)
+        public DataTable GetAllRelationOfAFamily(int pID)           //Get all relations of a parentage
         {
             DataTable allRelation = new DataTable();
             FamilyManagementDataContext db = new FamilyManagementDataContext();
@@ -44,33 +44,7 @@ namespace FamilyManagementSoftware.DAO
             }
             return allRelation;
         }
-        public List<Member> GetAllMemOfAParentage(int pID)
-        {
-            FamilyManagementDataContext db = new FamilyManagementDataContext();
-            List<int> listID1 = new List<int>();
-            var query = from Relationship in db.Relationships
-                        where Relationship.parentageID == pID
-                        select Relationship.person1ID;
-            foreach(int id1 in query)
-            {
-                listID1.Add(id1);
-            }
-            List<int> listID2 = new List<int>();
-            var query2 = from Relationship in db.Relationships
-                        where Relationship.parentageID == pID
-                        select Relationship.person2ID;
-            foreach (int id2 in query2)
-            {
-                listID2.Add(id2);
-            }
-            List<int> ID = listID1.Union(listID2).ToList();
-            List<Member> memList = new List<Member>();
-            foreach(int id in ID)
-            {
-                memList.Add(DAOMember.Instance.GetMemberByID(id));
-            }
-            return memList;
-        }
+     
         public List<Member> GetChildList(int mem1Id)
         {
             FamilyManagementDataContext db = new FamilyManagementDataContext();
@@ -85,20 +59,20 @@ namespace FamilyManagementSoftware.DAO
             }
             return childList;
         }
-        public int GetIDAbove(int memID)
+        public int GetIDAbove(int memID)         //Get the id of person who above a specific member
         {
             FamilyManagementDataContext db = new FamilyManagementDataContext();
             var query = (from Relationship in db.Relationships
                          where Relationship.person2ID == memID
-                         select Relationship.person1ID).SingleOrDefault();
+                         select Relationship.person1ID).SingleOrDefault();   //Get the person1ID which indicates a father of a member
             if(query==null)
             {
-                return memID;
+                return memID;                                                //If there's no id above, return that member's ID
             }
-            else 
+            else                                                             //Else query to have the grandfather
             {
                 var query2 = (from Relationship in db.Relationships
-                              where Relationship.person2ID == int.Parse(query.ToString())
+                              where Relationship.person2ID == int.Parse(query.ToString())  
                               select Relationship.person1ID).SingleOrDefault();
                 if(query2==null)
                 {
@@ -136,7 +110,7 @@ namespace FamilyManagementSoftware.DAO
             }
             return true;
         }
-        public bool DeleteRelation(int p1ID, int p2ID)
+        public bool DeleteRelation(int p1ID, int p2ID)                 //Delete a specific relation satisfy p1ID and p2ID
         {
             FamilyManagementDataContext db = new FamilyManagementDataContext();
             var delQuery = from Relationship in db.Relationships
@@ -146,7 +120,7 @@ namespace FamilyManagementSoftware.DAO
             db.SubmitChanges();
             return true;
         }
-        public bool DeleteMemberRelation(int memID)
+        public bool DeleteMemberRelation(int memID)                     //Delete all relation of a member
         {
             FamilyManagementDataContext db = new FamilyManagementDataContext();
             var delQuery = from Relationship in db.Relationships

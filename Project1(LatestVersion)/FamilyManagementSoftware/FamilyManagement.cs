@@ -15,8 +15,7 @@ namespace FamilyManagementSoftware
             this.Description = description;
             this.Picture = picture;
             this.memID = memID;
-            this.Picture.Text = this.Description;
-            
+            this.Picture.Text = this.Description;            
         }     
         // The size of the drawn rectangles.
         public SizeF NodeSize = new SizeF(85, 50);

@@ -1,0 +1,12 @@
+D:\Project1(LatestVersion)\FamilyManagementSoftware\bin\Release\FamilyManagementSoftware.exe.config
+D:\Project1(LatestVersion)\FamilyManagementSoftware\bin\Release\FamilyManagementSoftware.exe
+D:\Project1(LatestVersion)\FamilyManagementSoftware\bin\Release\FamilyManagementSoftware.pdb
+D:\Project1(LatestVersion)\FamilyManagementSoftware\obj\Release\FamilyManagementSoftware.AddingForm.resources
+D:\Project1(LatestVersion)\FamilyManagementSoftware\obj\Release\FamilyManagementSoftware.Authentication.resources
+D:\Project1(LatestVersion)\FamilyManagementSoftware\obj\Release\FamilyManagementSoftware.Form1.resources
+D:\Project1(LatestVersion)\FamilyManagementSoftware\obj\Release\FamilyManagementSoftware.Properties.Resources.resources
+D:\Project1(LatestVersion)\FamilyManagementSoftware\obj\Release\FamilyManagementSoftware.csproj.GenerateResource.cache
+D:\Project1(LatestVersion)\FamilyManagementSoftware\obj\Release\FamilyManagementSoftware.csproj.CoreCompileInputs.cache
+D:\Project1(LatestVersion)\FamilyManagementSoftware\obj\Release\FamilyManagementSoftware.exe
+D:\Project1(LatestVersion)\FamilyManagementSoftware\obj\Release\FamilyManagementSoftware.pdb
+D:\Project1(LatestVersion)\FamilyManagementSoftware\obj\Release\FamilyManagementSoftware.csprojAssemblyReference.cache
