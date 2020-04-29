@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-FamilyManagement",
+      "appliesTo": "Project1(LatestVersion)/FamilyManagementSoftware/FamilyManagement.dbml",
+      "type": "launch"
+    }
+  ]
+}
